@@ -1,0 +1,28 @@
+version: '4.34'
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres
+      - rabbitmq
+    environment:
+      - DATABASE_URL=postgresql://user:pass@postgres:5432/edgedb
+      - RABBITMQ_URL=amqp://guest:guest@rabbitmq:5672
+
+  postgres:
+    image: postgres:15
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=pass
+      - POSTGRES_DB=edgedb
+    ports:
+      - "5432:5432"
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"

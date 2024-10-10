@@ -1,0 +1,1 @@
+export const EDGE_QUEUE = 'edge_queue';

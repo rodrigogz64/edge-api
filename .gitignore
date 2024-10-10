@@ -1,0 +1,49 @@
+# Dependencies
+node_modules/
+dist/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Tests
+/coverage
+/.nyc_output
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Build files
+/dist
+/build
+
+# Temporary files
+*.swp
+*.swo
+.tmp/
+*.tmp
+*.bak
+
+# Docker
+docker-compose.override.yml
+
+# Database
+*.sqlite
+
+# NestJS specific
+/dist
+/node_modules
+
+# Generated files
+src/schema.gql
